@@ -284,6 +284,27 @@ mapbox.addPolygon = function (arg) {
   });
 };
 
+mapbox.addPolyline = function (arg) {
+  return new Promise(function (resolve, reject) {
+    try {
+      var points = arg.points;
+      if (points === undefined) {
+        reject("Please set the 'points' parameter");
+        return;
+      }
+
+      /*
+      TODO 
+      */
+
+      reject("not implemented for iOS (yet)");
+    } catch (ex) {
+      console.log("Error in mapbox.addPolyline: " + ex);
+      reject(ex);
+    }
+  });
+};
+
 var MGLMapViewDelegateImpl = (function (_super) {
   __extends(MGLMapViewDelegateImpl, _super);
   function MGLMapViewDelegateImpl() {
